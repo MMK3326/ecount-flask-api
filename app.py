@@ -12,6 +12,10 @@ COMPANY_CODE = os.getenv("EC_COMPANY_CODE")
 USER_ID = os.getenv("EC_USER_ID")
 USER_PW = os.getenv("EC_USER_PW")
 
+@app.route("/")
+def home():
+    return "ECOUNT Flask API 서버가 정상적으로 작동 중입니다 ✅"
+
 @app.route("/stock-in", methods=["POST"])
 def stock_in():
     data = request.json
